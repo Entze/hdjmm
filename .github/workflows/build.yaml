@@ -8,8 +8,8 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-20.04, macos-11, windows-2019]
-    name: ${{ matrix.os }}
-    runs-on: "build: ${{ matrix.os }}"
+    name: "build: ${{ matrix.os }}"
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout project
         uses: actions/checkout@v2
